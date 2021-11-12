@@ -1,0 +1,113 @@
+<div class="navbar-area">
+    <div class="main-responsive-nav">
+        <div class="container">
+            <div class="main-responsive-menu"></div>
+        </div>
+    </div>
+    <div class="main-navbar">
+        <div class="container">
+            <nav class="navbar navbar-expand-md navbar-light">
+                <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li>
+                            <a routerLink="" class="logo scroll-to">
+                                <img src="assets\img\logoParisien.png" alt class="img" />
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a routerLink="" class="nav-link active">
+                {{ "NAVBAR.HOME" | translate }}
+              </a>
+                        </li>
+                        <li class="nav-item">
+                            <a routerLink="/about" routerLinkActive="active" class="nav-link">
+                {{ "NAVBAR.ABOUT" | translate }}
+              </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a routerLink="/gallery" routerLinkActive="active" class="nav-link">
+                {{ "NAVBAR.GALLERY" | translate }}
+              </a>
+                        </li>
+                        <li class="nav-item">
+                            <a routerLink="/menu" routerLinkActive="active" class="nav-link">
+                {{ "NAVBAR.MENU" | translate }}
+              </a>
+                        </li>
+                        <li class="nav-item">
+                            <a routerLink="/contact" routerLinkActive="active" class="nav-link">
+                {{ "NAVBAR.CONTACT" | translate }}
+              </a>
+                        </li>
+                    </ul>
+                    <div class="lang-menu">
+                        <div class="selected-lang">
+                            {{ "NAVBAR.LANGUAGE" | translate }}
+                        </div>
+                        <ul>
+                            <li>
+                                <a (click)="translate.use('en')" class="en myClickableThingy">English</a
+                >
+              </li>
+              <li>
+                <a (click)="translate.use('de')" class="de myClickableThingy"
+                  >German</a
+                >
+              </li>
+
+              <li>
+                <a (click)="translate.use('fr')" class="fr myClickableThingy"
+                  >French</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="others-options d-flex align-items-center">
+            <div class="option-item">
+              <a
+                routerLink="/shop-list "
+                routerLinkActive="active "
+                class="default-btn"
+              >
+                Order Online
+                <span></span>
+              </a>
+                    </div>
+                </div>
+        </div>
+        </nav>
+    </div>
+</div>
+<div class="others-option-for-responsive">
+    <div class="container">
+        <div class="dot-menu">
+            <div class="inner">
+                <div class="circle circle-one"></div>
+                <div class="circle circle-two"></div>
+                <div class="circle circle-three"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="option-inner">
+                <div class="others-options d-flex align-items-center">
+                    <div class="option-item">
+                        <div class="cart-btn">
+                            <a href="cart.html ">
+                                <i class="flaticon-shopping-cart"></i>
+                                <span>0</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="option-item">
+                        <a href="shop.html " class="default-btn">
+                Order Online
+                <span></span>
+              </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

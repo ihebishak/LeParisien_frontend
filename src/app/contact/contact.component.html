@@ -1,0 +1,147 @@
+<app-navbar></app-navbar>
+<div class="page-title-area item-bg-1">
+    <div class="d-table">
+        <div class="d-table-cell">
+            <div class="container">
+                <div class="page-title-content">
+                    <h2>{{ "CONTACT.TITLE" | translate }}</h2>
+                    <ul>
+                        <li>
+                            <a routerLink="" routerLinkActive="active">{{
+                "CONTACT.HOME" | translate
+              }}</a>
+                        </li>
+                        <li>
+                            <i class="flaticon-tea-cup"></i>
+                        </li>
+                        <li>{{ "CONTACT.CONTACT" | translate }}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page-title-shape">
+        <img src="assets\img\page-title\down-shape.png" alt="image" />
+    </div>
+</div>
+
+<section class="contact-box-area pt-100 pb-70">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-4 col-md-6">
+                <div class="box-item">
+                    <div class="contact-box-content">
+                        <div class="icon">
+                            <i class="flaticon-world"></i>
+                        </div>
+                        <p>vetterstraße 37 , Chemnitz 09126.</p>
+                        <div class="shape">
+                            <img src="assets\img\image-icon\2.png" alt="image" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="box-item">
+                    <ul class="box-table">
+                        <li>
+                            {{ "CONTACT.MONDAY" | translate }}<span>12:00 - 20.00</span>
+                        </li>
+                        <li>{{ "CONTACT.TUESDAY" | translate }}<span>Closed</span></li>
+                        <li>
+                            {{ "CONTACT.WEDNESDAY" | translate }}<span>12:00 - 20.00</span>
+                        </li>
+                        <li>
+                            {{ "CONTACT.THURSDAY" | translate }}<span>12:00 - 20.00</span>
+                        </li>
+                        <li>
+                            {{ "CONTACT.FRIDAY" | translate }}<span>11:00 - 22.00</span>
+                        </li>
+                        <li>
+                            {{ "CONTACT.SATURDAY" | translate }}<span>10:00-22:00</span>
+                        </li>
+                        <li>{{ "CONTACT.SUNDAY" | translate }}<span>10:00-22:00</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 offset-lg-0 offset-md-3">
+                <div class="box-item">
+                    <div class="contact-box-content">
+                        <div class="icon">
+                            <i class="flaticon-phone-ringing"></i>
+                        </div>
+                        <p>
+                            <a href="tel:065432134567">+(49) – </a>
+                            <br />
+                            <a><span class="__cf_email__">leparisien@apps4you.org</span></a>
+                        </p>
+                        <div class="shape">
+                            <img src="assets\img\image-icon\1.png" alt="image" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="contact-area pb-100">
+    <div class="container">
+        <div class="contact-form">
+            <div class="title">
+                <span>{{ "CONTACT.CONTACT US" | translate }}</span>
+                <h3>{{ "CONTACT.CONTACT WITH US" | translate }}</h3>
+            </div>
+            <form id="contactForm" (ngSubmit)="submit()">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12">
+                        <div class="form-group">
+                            <input type="text" name="Name" id="Name" class="form-control" required="" data-error="Please enter your Name" placeholder="Full Name" [(ngModel)]="contact.fullName" />
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="form-group">
+                            <input type="email" name="email" id="email" class="form-control" required="" data-error="Please enter your email" placeholder="Email" [(ngModel)]="contact.email" />
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="form-group">
+                            <input type="text" name="phone_number" id="phone_number" required="" data-error="Please enter your number" class="form-control" placeholder="Phone" [(ngModel)]="contact.phone" />
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="form-group">
+                            <input type="text" name="msg_subject" id="msg_subject" class="form-control" required="" data-error="Please enter your subject" placeholder="Subject" [(ngModel)]="contact.subject" />
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-12">
+                        <div class="form-group">
+                            <textarea name="message" class="form-control" id="message" cols="30" rows="5" required="" data-error="Write your message" placeholder="Your Message" [(ngModel)]="contact.message"></textarea>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-12">
+                        <button type="submit" class="default-btn">
+              {{ "CONTACT.SEND MESSAGE" | translate }}
+              <i class="flaticon-play-button"></i>
+              <span></span>
+            </button>
+                        <div id="msgSubmit" class="h3 text-center hidden"></div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<div class="map pb-100">
+    <div class="container">
+        <iframe src="https://maps.google.com/maps?q=vetterstra%C3%9Fe%2037%20%20Chemnitz%2009126&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+    </div>
+</div>
+<app-footer></app-footer>
